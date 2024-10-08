@@ -35,6 +35,14 @@ ENV GOPATH="/go"
 ENV PATH="${GOPATH}/bin:${PATH}"
 
 USER vscode
+WORKDIR /home/vscode/
+
 # Install Rust
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
-ENV PATH="/root/.cargo/bin:${PATH}"
+ENV PATH="/home/vscode/.cargo/bin:${PATH}"
+
+# Install witgen
+RUN cargo install wit-bindgen-cli
+
+# Install wasm-tools
+RUN cargo install wasm-tools

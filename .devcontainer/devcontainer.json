@@ -13,7 +13,8 @@
                 "rust-lang.rust",
                 "ms-vscode.cpptools",
                 "ziglang.vscode-zig",
-                "matklad.rust-analyzer"
+                "matklad.rust-analyzer",
+                "dockerfile-tools.dockerfile-tools"
             ]
         }
     },
