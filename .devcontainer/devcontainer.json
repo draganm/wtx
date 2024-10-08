@@ -1,0 +1,21 @@
+{
+    "name": "Go, TinyGo, Rust, Zig DevContainer",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "golang.Go",
+                "rust-lang.rust",
+                "ms-vscode.cpptools",
+                "ziglang.vscode-zig",
+                "matklad.rust-analyzer"
+            ]
+        }
+    },
+    "postCreateCommand": "rustup target add wasm32-unknown-unknown"
+}
