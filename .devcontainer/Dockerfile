@@ -7,13 +7,13 @@ RUN apt-get update && \
     gcc make unzip libssl-dev pkg-config clang && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Install Go
-ARG GO_VERSION=1.23.2
-RUN curl -OL https://golang.org/dl/go${GO_VERSION}.linux-amd64.tar.gz && \
-    tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz && \
-    rm go${GO_VERSION}.linux-amd64.tar.gz
+# # Install Go
+# ARG GO_VERSION=1.23.2
+# RUN curl -OL https://golang.org/dl/go${GO_VERSION}.linux-amd64.tar.gz && \
+#     tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz && \
+#     rm go${GO_VERSION}.linux-amd64.tar.gz
 
-ENV PATH="/usr/local/go/bin:${PATH}"
+# ENV PATH="/usr/local/go/bin:${PATH}"
 
 # Install TinyGo
 #RUN curl -fsSL https://tinygo.org/get/tinygo | bash

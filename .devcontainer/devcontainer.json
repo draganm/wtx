@@ -1,5 +1,10 @@
 {
     "name": "Go, TinyGo, Rust, Zig DevContainer",
+    "features": {
+        "golang": "1.23.2",
+        "github-cli": "latest",
+        "sshd": "latest"
+    },
     "build": {
         "dockerfile": "Dockerfile"
     },
@@ -14,7 +19,8 @@
                 "ms-vscode.cpptools",
                 "ziglang.vscode-zig",
                 "matklad.rust-analyzer",
-                "dockerfile-tools.dockerfile-tools"
+                "dockerfile-tools.dockerfile-tools",
+                "BytecodeAlliance.wit-idl"
             ]
         }
     },
